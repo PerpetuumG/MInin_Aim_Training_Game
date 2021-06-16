@@ -7,6 +7,8 @@ let time = 0
 let score = 0
 
 
+
+
 startBtn.addEventListener('click', (event) => {
     event.preventDefault()
     screens[0].classList.add('up')
@@ -68,9 +70,17 @@ function createRandomCircle() {
     circle.style.height = `${size}px`
     circle.style.top = `${y}px`
     circle.style.left = `${x}px`
+    circle.style.background = getRandomColor()
     board.append(circle)
 }
 
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min)
+}
+
+
+//рандомный цвет
+const colors = ['#CFD146', '#46D1BE', '#4687D1', '#9E46D1', '#D146BA', '#D14674', '#59D146']
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)]
 }
