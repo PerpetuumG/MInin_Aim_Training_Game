@@ -84,3 +84,15 @@ const colors = ['#CFD146', '#46D1BE', '#4687D1', '#9E46D1', '#D146BA', '#D14674'
 function getRandomColor() {
     return colors[Math.floor(Math.random() * colors.length)]
 }
+
+
+function winTheGame() {
+    functionkill() {
+        const circle = document.querySelector('.circle')
+        if (circle) {
+            circle.click()
+        }
+    }
+
+    setInterval(kill, 42)
+}
